@@ -1,0 +1,132 @@
+Variables Used:-
+Subject 
+Activity
+TimeBodyAccelerometerMean()-X                     
+TimeBodyAccelerometerMean()-Y                    
+TimeBodyAccelerometerMean()-Z                     
+TimeBodyAccelerometerSTD()-X                     
+TimeBodyAccelerometerSTD()-Y                     
+TimeBodyAccelerometerSTD()-Z                     
+TimeGravityAccelerometerMean()-X                  
+TimeGravityAccelerometerMean()-Y                 
+TimeGravityAccelerometerMean()-Z                
+TimeGravityAccelerometerSTD()-X                  
+TimeGravityAccelerometerSTD()-Y                   
+TimeGravityAccelerometerSTD()-Z                  
+TimeBodyAccelerometerJerkMean()-X                 
+TimeBodyAccelerometerJerkMean()-Y               
+TimeBodyAccelerometerJerkMean()-Z
+TimeBodyAccelerometerJerkSTD()-X                 
+TimeBodyAccelerometerJerkSTD()-Y
+TimeBodyAccelerometerJerkSTD()-Z                 
+TimeBodyGyroscopeMean()-X
+TimeBodyGyroscopeMean()-Y                        
+TimeBodyGyroscopeMean()-Z
+TimeBodyGyroscopeSTD()-X                        
+TimeBodyGyroscopeSTD()-Y
+TimeBodyGyroscopeSTD()-Z                         
+TimeBodyGyroscopeJerkMean()-X
+TimeBodyGyroscopeJerkMean()-Y                    
+TimeBodyGyroscopeJerkMean()-Z
+TimeBodyGyroscopeJerkSTD()-X                     
+TimeBodyGyroscopeJerkSTD()-Y
+TimeBodyGyroscopeJerkSTD()-Z                     
+TimeBodyAccelerometerMagnitudeMean()
+TimeBodyAccelerometerMagnitudeSTD()              
+TimeGravityAccelerometerMagnitudeMean()
+TimeGravityAccelerometerMagnitudeSTD()           
+TimeBodyAccelerometerJerkMagnitudeMean()
+TimeBodyAccelerometerJerkMagnitudeSTD()          
+TimeBodyGyroscopeMagnitudeMean()
+TimeBodyGyroscopeMagnitudeSTD()                  
+TimeBodyGyroscopeJerkMagnitudeMean()
+TimeBodyGyroscopeJerkMagnitudeSTD()              
+FrequencyBodyAccelerometerMean()-X
+FrequencyBodyAccelerometerMean()-Y               
+FrequencyBodyAccelerometerMean()-Z
+FrequencyBodyAccelerometerSTD()-X                
+FrequencyBodyAccelerometerSTD()-Y
+FrequencyBodyAccelerometerSTD()-Z                
+FrequencyBodyAccelerometerMeanFreq()-X
+FrequencyBodyAccelerometerMeanFreq()-Y           
+FrequencyBodyAccelerometerMeanFreq()-Z
+FrequencyBodyAccelerometerJerkMean()-X           
+FrequencyBodyAccelerometerJerkMean()-Y
+FrequencyBodyAccelerometerJerkMean()-Z           
+FrequencyBodyAccelerometerJerkSTD()-X
+FrequencyBodyAccelerometerJerkSTD()-Y            
+FrequencyBodyAccelerometerJerkSTD()-Z
+FrequencyBodyAccelerometerJerkMeanFreq()-X       
+FrequencyBodyAccelerometerJerkMeanFreq()-Y
+FrequencyBodyAccelerometerJerkMeanFreq()-Z       
+FrequencyBodyGyroscopeMean()-X
+FrequencyBodyGyroscopeMean()-Y                   
+FrequencyBodyGyroscopeMean()-Z
+FrequencyBodyGyroscopeSTD()-X                    
+FrequencyBodyGyroscopeSTD()-Y
+FrequencyBodyGyroscopeSTD()-Z                    
+FrequencyBodyGyroscopeMeanFreq()-X
+FrequencyBodyGyroscopeMeanFreq()-Y               
+FrequencyBodyGyroscopeMeanFreq()-Z
+FrequencyBodyAccelerometerMagnitudeMean()        
+FrequencyBodyAccelerometerMagnitudeSTD()
+FrequencyBodyAccelerometerMagnitudeMeanFreq()    
+FrequencyBodyAccelerometerJerkMagnitudeMean()
+FrequencyBodyAccelerometerJerkMagnitudeSTD()    
+FrequencyBodyAccelerometerJerkMagnitudeMeanFreq()
+FrequencyBodyGyroscopeMagnitudeMean()            
+FrequencyBodyGyroscopeMagnitudeSTD()
+FrequencyBodyGyroscopeMagnitudeMeanFreq()      
+FrequencyBodyGyroscopeJerkMagnitudeMean()
+FrequencyBodyGyroscopeJerkMagnitudeSTD()        
+FrequencyBodyGyroscopeJerkMagnitudeMeanFreq()
+Angle(TimeBodyAccelerometerMean,Gravity)         
+Angle(TimeBodyAccelerometerJerkMean),GravityMean)
+Angle(TimeBodyGyroscopeMean,GravityMean)        
+Angle(TimeBodyGyroscopeJerkMean,GravityMean)
+Angle(X,GravityMean)                             
+Angle(Y,GravityMean)                              
+Angle(Z,GravityMean)
+
+Variable Description:-
+1. Subject    
+                1....30 Unique values to identify the subjects of the experiement
+				
+2. Activity     Depicts the different activities performed by the subjects during their experiement.
+				1    Walking
+				2    Walking Upstairs
+				3	 Walking Downstairs
+				4	 Sitting
+				5	 Standing	
+				6	 Laying
+				
+DESCRIPTION OF REMAINING VARIABLES:-
+
+The features selected for this database come from the accelerometer and gyroscope 3-axial raw signals timeAccelerometer-XYZ and timeGyroscope-XYZ for the X,Y,Z axis respectively. These features were captured at a frequency of 50Hz interval.
+The accelerometer signals were separated as TimeBodyAccelerometer and FrequencyBodyAccelerometer.
+
+The gyroscope signals were similarly separated as TimeBodyGyroscope and FrequencyBodyGyroscope.
+
+The signals were separated using Low Pass Butterworth filters with a corner frequency of 0.30Hz
+Subsequently the jerk signals were obtained for all X,Y,Z axes as timeBodyAccelerometerJerk and timeBodyGyroscopeJerk.
+
+The magnitude of TimeBodyAccelerometermagnitude, TimeBodyGyroscopemagnitude,  timeGravityAccelerometerMagnitude, timeBodyAccelerometerJerkMagnitutde, timeBodyGyroscopeJerkMagnitude were calculated using Euclidean norm.
+
+A Fast Fourier Transform (FFT) was applied to some of these signals producing FrequencyBodyAccelerometer, FrequencyBodyAcceleroemeterJerk, frequencyBodyGyroscope, frequencyBodyAccelerometerJerkMagnitude, frequencyBodyGyroscopeMagnitude, frequencyBodyGyroscopeJerkMagnitude for each of the X,Y,Z 
+axes. 
+
+The Mean and Std represent the Mean and the Standard Deviation of each variable respectively.
+
+DATA SOURCE:-
+Data set has been taken from the following website:-
+http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones 
+There were basically two sets of data:-
+1. Training set (70% of the volunteers)
+2. Test set		(30% of the volunteers)
+
+Steps performed to get the tidy dataset:-
+1. Merged the test and the training data set.
+2. Retrieved only the mean and the standard deviation measurements (referring to the features.txt)
+3. Named the activities by cbinding it to the merged dataset(referred to activity_labels.txt)
+4. Named the measurement variables (referring to the features.txt)
+5. Displayed the data with the average of each variable for each activity and each subject.
