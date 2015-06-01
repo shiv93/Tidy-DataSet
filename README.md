@@ -1,4 +1,4 @@
-#Getting And Cleaning Data Assignment
+#Getting And Cleaning Data
 
 Creating a tidy data set of wearable computing data originally taken from
 http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones 
